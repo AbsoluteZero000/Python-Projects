@@ -6,12 +6,12 @@ rules = {
     "p": "r",
     "s": "p"
 }
-def compute_winner(choice, user_choice):
-    if(user_choice not in choices):
+def compute_winner(pc, user):
+    if(user not in choices):
         return "Invalid Choice!?!?!"
-    elif(choice == user_choice):
+    elif(pc == user):
         return "Tie"
-    elif rules.get(user_choice) == choice:
+    elif rules.get(user) == pc:
         return "You win!"
     else:
         return "The Computer Wins!"
